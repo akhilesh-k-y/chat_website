@@ -38,7 +38,7 @@
 }
 
 .lg1 {
-  padding:0 20vw;
+  padding:0 20vw 2vw 20vw;
 }
 #sbt {
   text-decoration: none;
@@ -46,4 +46,17 @@
 }
 .cnt {
   text-align: start;
+}
+
+.jbr {
+  margin: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }

@@ -13,53 +13,45 @@ const Signup = () => {
                 <img src={lgo}/>
             </div>
             <div className="container lg1">
-                <form>
-                <div className="form-group">
-                    <h2>Signup</h2>
+            <form>
+                <div class="form-row cnt">
+                    <div class="form-group col-md-6">
+                    <label for="inputEmail4">First Name</label>
+                    <input type="text" class="form-control" id="Fname" required/>
+                    </div>
+                    <div class="form-group col-md-6">
+                    <label for="inputPassword4">Last Name</label>
+                    <input type="text" class="form-control" id="Lname" required/>
+                    </div>
                 </div>
-                    <div class="form-group form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputPassword4">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4" />
-                        </div>
+                <div class="form-row cnt">
+                    <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputemail" required/>
                     </div>
-                    <div class="form-group row">
-                        <label for="city" class="col-sm-2  col-form-label">City</label>
-                        <div class="col-sm-4">
-                        <input type="text" class="form-control" id="city"/>
-                        </div>
-                        <label for="state" class="col-sm-2  col-form-label">state</label>
-                        <div class="col-sm-4">
-                        <input type="text" class="form-control" id="state"/>
-                        </div>
+                    <div class="form-group col-md-6">
+                    <label for="mnumber">Mobile Number</label>
+                    <input  class="form-control" id="mnumber" type="number"  min='6000000000' max='9999999999' required />
                     </div>
-                    <div class="form-group row">
-                        <label for="country" class="col-sm-2  col-form-label">Country</label>
-                        <div class="col-sm-4">
-                        <input type="text" class="form-control" id="country"/>
-                        </div>
+                </div>
+                <div class="form-group cnt">
+                    <label for="inputAddress">Password</label>
+                    <input type="password" class="form-control" id="inputpass" placeholder="" required/>
+                </div>
+                <div class="form-group cnt">
+                    <label for="inputAddress2">Confirm Password</label>
+                    <input type="password" class="form-control" id="confpass" required/>
+                </div>
+                <div class="form-group cnt">
+                    <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck"/>
+                    <label class="form-check-label" for="gridCheck">
+                        I accept the privacy terms and conditions.
+                    </label>
                     </div>
-                    <div class="form-group row">
-                    <div class="col-sm-6">Terms & Conditions</div>
-                        <div class="col-sm-6">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck1"/>
-                            <label class="form-check-label" for="gridCheck1">
-                            I acept the privecy terms.
-                            </label>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-10">
+                </div>
                         <button type="submit" class="btn btn-dark">Signup</button>
-                        </div>
-                    </div>
-                </form>
+            </form>
             </div>
             <div>
                 <Ftr />
