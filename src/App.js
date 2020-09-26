@@ -3,6 +3,7 @@ import logo from './main_logo.png';
 import './App.css';
 import Lgn from './elements/login'
 import Sgn from './elements/Signup'
+import Mn from './elements/main'
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Lgn />
       </div> */}
       <div>
-        <Sgn />
+        <Mn />
       </div>
     </div>
   );

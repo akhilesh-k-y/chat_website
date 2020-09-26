@@ -60,3 +60,19 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+#al {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+#rside{
+  background-color: ghostwhite;
+  height: 650px;
+  overflow-y: scroll;
+}
+#lmain{
+  overflow-y: scroll;
+  background-color: white;
+}
+.inm{
+  position: bottom;
+}
