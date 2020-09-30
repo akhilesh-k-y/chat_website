@@ -1,18 +1,18 @@
 import React from 'react'
 
-const ftr = () => {
+const Ftr = () => {
     return (
         <div>
-            <div class="jumbotron jumbotron-fluid jbr">
-                <div class="container">
-                    <h1 class="display-4">Our Vission</h1>
-                    <p class="lead">Contact : xxxxxxxxxx</p>
+            <div className="jumbotron jumbotron-fluid jbr">
+                <div className="container">
+                    <h1 className="display-4">Our Vission</h1>
+                    <p className="lead">Contact : xxxxxxxxxx</p>
                     <p> Email : abc@xyz.com</p>
                 </div>
             </div>
-            <footer class='black'> &copy;Akhilesh-k-y</footer>
+            <footer className='black'> &copy;Akhilesh-k-y</footer>
         </div>
     )
 }
 
-export default ftr
+export default Ftr

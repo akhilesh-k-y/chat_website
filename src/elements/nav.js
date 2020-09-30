@@ -22,8 +22,8 @@ const Nava=(props)=>{
             </li>
           </ul>
           <br />
-          <form class="form-inline justify-content-center">
-              <button class="btn btn-outline-dark" type="button" onClick={props.val}>{props.name}</button>
+          <form className="form-inline justify-content-center">
+              <button className="btn btn-outline-dark" type="button" onClick={props.val}>{props.name}</button>
           </form>
         </div>
       </nav>

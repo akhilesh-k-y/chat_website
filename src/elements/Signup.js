@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Nava from './nav'
 import lgo from './img/lg11.png'
 import Ftr from './footer'

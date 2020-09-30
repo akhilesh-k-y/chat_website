@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import logo from './main_logo.png';
 import './App.css';
 import Lgn from './elements/login'
 import Sgn from './elements/Signup'

@@ -1,7 +1,7 @@
 import React from 'react'
 import lg from './img/lg11.png'
 
-const main = () => {
+const Main = () => {
     return (
         <div id='al'>
             <div id='rside'>
@@ -70,4 +70,4 @@ const main = () => {
     )
 }
 
-export default main;
+export default Main;
