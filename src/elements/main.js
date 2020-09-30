@@ -46,19 +46,22 @@ const main = () => {
             </div>
             <div id='lmain'>
                 <div>
-                <nav class="navbar navbar-light bg-light">
+                    <nav class="navbar navbar-light bg-light">
                     <a class="navbar-brand">Navbar</a>
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+                        </form>
                     </nav>
+                    <div>
+
+                    </div>
                     <footer class='inm'>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Enter content" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Send</button>
-                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter content" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Send</button>
+                            </div>
                         </div>
                     </footer>
                 </div>

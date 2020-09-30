@@ -3,11 +3,11 @@ import Nava from './nav'
 import lgo from './img/lg11.png'
 import Ftr from './footer'
 
-const Signup = () => {
+const Signup = (e) => {
     return (
         <div>
             <div>
-            <Nava name='Login'></Nava>
+            <Nava name='Login' val={e.val} hm={e.hm}></Nava>
             </div>
             <div class='container'>
                 <img src={lgo}/>
@@ -50,7 +50,7 @@ const Signup = () => {
                     </label>
                     </div>
                 </div>
-                        <button type="submit" class="btn btn-dark">Signup</button>
+                        <button type="submit" class="btn btn-dark" >Signup</button>
             </form>
             </div>
             <div>

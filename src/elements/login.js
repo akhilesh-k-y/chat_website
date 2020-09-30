@@ -3,11 +3,11 @@ import Nava from './nav'
 import lgo from './img/lg11.png'
 import Ftr from './footer'
 
-const lgin = () => {
+const lgin = (e) => {
     return (
     <div>
         <div>
-            <Nava name='Signup' ></Nava>
+            <Nava name='Signup' val={e.val} hm={e.hm}></Nava>
         </div>
         <div class='container'>
             <img src={lgo}/>
@@ -31,7 +31,7 @@ const lgin = () => {
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" />
                     <label className="form-check-label" for="exampleCheck1">Keep me logged in.</label>
                 </div>
-                <button type="submit" className="btn btn-dark">Log in</button>
+                <button type="submit" className="btn btn-dark" >Log in</button>
             </form>
         </div>
         <div>

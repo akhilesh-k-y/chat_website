@@ -76,3 +76,10 @@ input[type=number] {
 .inm{
   position: bottom;
 }
+.media-body{
+  text-align:start;
+  vertical-align: middle;
+}
+.nav-link{
+  cursor: pointer;
+}
