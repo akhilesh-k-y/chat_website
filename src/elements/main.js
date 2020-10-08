@@ -1,7 +1,18 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import lg from './img/lg11.png'
 
 const Main = () => {
+    var [chat,setState]=useState({dat:"",info:""})
+    const upd =(f)=>{
+        setState({...chat,dat:f.target.value});
+    }
+    const showdata = ()=>{
+        setState({...chat,info:chat.info+'<div id="cont">'+chat.dat+'</div><br/>'})
+        
+    }
+    useEffect(()=>{
+        document.getElementById('content_chat').innerHTML=chat.info
+    });
     return (
         <div id='al'>
             <div id='rside'>
@@ -53,14 +64,13 @@ const Main = () => {
                             <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
                         </form>
                     </nav>
-                    <div>
-
+                    <div id='content_chat'>
                     </div>
                     <footer class='inm'>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Enter content" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                            <input type="text" class="form-control" id="cht" value={chat.dat} onChange={upd} placeholder="Enter content" aria-label="Recipient's username" aria-describedby="button-addon2" />
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Send</button>
+                                <button class="btn btn-outline-secondary" type="button" onClick={showdata} id="button-addon2" >Send</button>
                             </div>
                         </div>
                     </footer>

@@ -70,7 +70,6 @@ input[type=number] {
   overflow-y: scroll;
 }
 #lmain{
-  overflow-y: scroll;
   background-color: white;
 }
 .inm{
@@ -82,4 +81,22 @@ input[type=number] {
 }
 .nav-link{
   cursor: pointer;
+}
+#content_chat{
+  width: 70vw;
+  height: 85vh;
+  overflow-y: scroll;
+}
+#cont{
+  background-color: yellowgreen;
+  width: 50%;
+  height: auto;
+  margin-left: 50%;
+  min-height: 10%;
+  word-wrap: break-word;
+  font-size: auto;
+  max-inline-size: 50%;
+  text-align: left;
+  padding: 1%;
+  box-sizing: border-box;
 }
