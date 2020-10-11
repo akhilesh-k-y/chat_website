@@ -1,4 +1,5 @@
 import {CHAT} from './chat_send'
+import INPUT from './input_type'
 
 const initialstate ={
     dat:"",
@@ -12,6 +13,12 @@ var sendreducer=(state=initialstate,action)=>
             ...state,
             info:state.info+'<div id="cont">'+state.dat+'</div><br/>'
         }
+
+        case INPUT: return{
+            ...state, 
+            dat:action.text
+        };
+
         default:return state;
     }
 }

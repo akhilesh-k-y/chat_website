@@ -1,6 +1,6 @@
 import {createStore} from 'redux'
-import sendreducer from './chat_reducer'
+import rootreducer from './rootreducer'
 
-const store = createStore(sendreducer)
+const store = createStore(rootreducer)
 
 export default store

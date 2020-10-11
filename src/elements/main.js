@@ -1,17 +1,13 @@
-import React,{useState,useEffect} from 'react'
+import React,{useEffect} from 'react'
 import lg from './img/lg11.png'
+import { useDispatch,useSelector } from 'react-redux'
 
 const Main = () => {
-    var [chat,setState]=useState({dat:"",info:""})
-    const upd =(f)=>{
-        setState({...chat,dat:f.target.value});
-    }
-    const showdata = ()=>{
-        setState({...chat,info:chat.info+'<div id="cont">'+chat.dat+'</div><br/>'})
-        
-    }
+    const dat = useSelector(state=>state.chat.dat);
+    const info = useSelector(state=>state.chat.info);
+    const dispatch = useDispatch()
     useEffect(()=>{
-        document.getElementById('content_chat').innerHTML=chat.info
+        document.getElementById('content_chat').innerHTML=info;
     });
     return (
         <div id='al'>
@@ -68,9 +64,9 @@ const Main = () => {
                     </div>
                     <footer class='inm'>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="cht" value={chat.dat} onChange={upd} placeholder="Enter content" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                            <input type="text" class="form-control" id="cht" value={dat} onChange={(e)=>{dispatch({type:'INPUT',text:e.target.value})}} placeholder="Enter content" aria-label="Recipient's username" aria-describedby="button-addon2" />
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" onClick={showdata} id="button-addon2" >Send</button>
+                                <button class="btn btn-outline-secondary" type="button" onClick={()=>dispatch({type:'CHAT'})} id="button-addon2" >Send</button>
                             </div>
                         </div>
                     </footer>

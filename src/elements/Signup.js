@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import {useDispatch} from 'react-redux'
 import Nava from './nav'
 import lgo from './img/lg11.png'
 import Ftr from './footer'
@@ -6,6 +7,7 @@ import Ftr from './footer'
 const Signup = (e) => {
     
     var [sign,setState]=useState({Fname:'',Lname:'',Email:'',Mnum:'',Pass:'',Cpass:'',Check:false});
+    const dispatch = useDispatch;
 
     const frmsubmit=(f)=>{
         if(sign.Pass !== sign.Cpass)
@@ -18,6 +20,16 @@ const Signup = (e) => {
         }
         else{
             console.log(sign)
+            dispatch({
+                type:'REGISTER',
+                Fname:sign.Fname,
+                Lname:sign.Lname,
+                Email:sign.Email,
+                Mnum:sign.Mnum,
+                Pass:sign.Mnum,
+                Cpass:sign.pass,
+                Check:sign.Check
+            })
         }
         f.preventDefault();
     }

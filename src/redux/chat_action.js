@@ -1,7 +1,10 @@
 import {CHAT} from './chat_send'
 
-export const send=()=>{
+const send=()=>{
     return{
-    type:CHAT
+    type:CHAT,
+    text:''
     };
 }
+
+export default send
