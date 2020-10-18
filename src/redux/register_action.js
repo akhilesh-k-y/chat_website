@@ -1,14 +1,11 @@
 import REGISTER from './register_type'
 
-const register = ()=>{
-    return{
-        type:REGISTER,
-        Fname:'',
-        Lname:'',
-        Email:'',
-        Mnum:'',
-        Pass:'',
-        Cpass:'',
-        Check:false
+
+const register = (frm)=>{
+    return (dispatch,getState)=>{
+
+        dispatch({type:REGISTER,INFO:frm})
     }
 }
+
+export default register

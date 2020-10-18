@@ -1,4 +1,4 @@
-import REGISTER from './input_type'
+import REGISTER from './register_type'
 
 const newstate={
     Finame:'',
@@ -14,17 +14,9 @@ const registernew=(state=newstate,action)=>
 {
     switch(action.type)
     {
-        case REGISTER:return{
-            ...state,
-            Finame:action.Fname,
-            Laname:action.Lname,
-            UEmail:action.Email,
-            UMnum:action.Mnum,
-            UPass:action.Pass,
-            UCpass:action.Cpass,
-            UCheck:action.Check
-        }
+        case REGISTER: console.log(action.INFO); break;
         default: return state
     }
+    return state
 }
 export default registernew;

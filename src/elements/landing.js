@@ -8,7 +8,7 @@ const landing = (e) => {
     return (
         <div>
             <div>
-                <Nv name='Login' val={e.val}></Nv>
+                <Nv name='Login'></Nv>
             </div>
             <div>
                 <ul class="list-unstyled">

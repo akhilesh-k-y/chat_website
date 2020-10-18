@@ -1,14 +1,21 @@
-import React,{useEffect} from 'react'
+import React,{useState} from 'react'
 import lg from './img/lg11.png'
 import { useDispatch,useSelector } from 'react-redux'
+import ChatElement from './chatElement'
+import send from '../redux/chat_action'
 
 const Main = () => {
-    const dat = useSelector(state=>state.chat.dat);
-    const info = useSelector(state=>state.chat.info);
+    const [content,setState]= useState({dat:''})
+    const chat_info = useSelector(state=>state.chat.payload)
     const dispatch = useDispatch()
-    useEffect(()=>{
-        document.getElementById('content_chat').innerHTML=info;
-    });
+    const handlechange=(f)=>{
+        setState({...content,dat:f.target.value})
+    }
+    const sendchat =()=>{
+        dispatch(send(content))
+    }
+    
+    
     return (
         <div id='al'>
             <div id='rside'>
@@ -61,12 +68,15 @@ const Main = () => {
                         </form>
                     </nav>
                     <div id='content_chat'>
+                        {chat_info.map(cat=>{return(
+                            <ChatElement value={cat} key={cat.id} />
+                        )})}
                     </div>
                     <footer class='inm'>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="cht" value={dat} onChange={(e)=>{dispatch({type:'INPUT',text:e.target.value})}} placeholder="Enter content" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                            <input type="text" class="form-control" id="cht" value={content.dat} onChange={handlechange} placeholder="Enter content" />
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button" onClick={()=>dispatch({type:'CHAT'})} id="button-addon2" >Send</button>
+                                <button class="btn btn-outline-secondary" type="button" onClick={sendchat} id="button-addon2" >Send</button>
                             </div>
                         </div>
                     </footer>

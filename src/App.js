@@ -1,35 +1,26 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './App.css';
 import Lgn from './elements/login'
 import Sgn from './elements/Signup'
 import Mn from './elements/main'
+import Dashboard from './elements/protected/private_page'
 import Ln from './elements/landing'
-import { Provider } from 'react-redux'
-import store from './redux/store'
+import { Switch,Route,Redirect} from 'react-router-dom'
+import error404 from './elements/404'
 
 function App() {
-  var [count,setState]= useState(true);
-  var [lnd,setLstate] = useState(true);
-  const chngsgnin =()=>{
-    setState(count=true);
-  }
-  const chngsgnup =()=>{
-    setState(count=false);
-  }
-  const lndpgd = ()=>{
-    setLstate(lnd=false);
-  }
-  const lndpgu = ()=>{
-    setLstate(lnd=true);
-  }
+
   return(
-      <Provider store={store}>
       <div className="App">
-       {!lnd && !count && <Sgn val={chngsgnin} hm={lndpgu} />}
-       {!lnd && count && <Lgn val={chngsgnup} hm={lndpgu} />}
-       {lnd && <Ln val={lndpgd} />} 
-        </div>
-        </Provider>
+       <Switch>
+         <Route exact path="/" component={Ln}/>
+         <Route exact path="/login" component={Lgn}/>
+         <Route exact path="/Signup" component={Sgn}/>
+         <Route exact path="/Dashboard" component={Mn}/>  
+         <Route component={error404} />
+         <Redirect to='' />
+       </Switch>
+      </div>
   );
 }
 
